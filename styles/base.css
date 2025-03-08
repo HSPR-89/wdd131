@@ -1,0 +1,164 @@
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr 10% / 1fr 1fr 1fr 1fr;
+}
+
+img {
+width: 200px;
+}
+
+main {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-template: 1fr/ 2fr 1fr;
+}
+
+header>h1 {
+    text-align: center;
+    color: #eee;
+}
+
+.font-lightblue {
+    color: #1084b9
+}
+
+.title{
+    margin: 0;
+    background: #1681d8;
+    text-align: center;
+    font-size: 16pt;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    
+}
+
+.card > div{
+    display: flex;
+}
+
+.card {
+    border: 0.5px solid rgb(117, 8, 8);
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  .card h1 {
+      font-size: 18pt;
+      text-align: center;
+      margin: 0;
+      padding: 1rem 0;
+      height: fit-content;
+      background-color: #054b36;
+      color: #FDFDFD;
+      border-radius: 1rem 1rem 0 0;
+  }
+
+  .card>div {
+      padding: 2rem;
+      display: flex;
+      height: fit-content;
+      gap: 1.5rem;
+  }
+
+  .card>div>img {
+      flex-grow: 1;
+      width: 30%;
+      height: 30%;
+  }
+
+  .card>div>figure {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0.5rem 0;
+  }
+
+  .card>div>figure>figcaption {
+      text-align: center;
+      padding-top: 1rem;
+      font-style: italic;
+  }
+
+  .card>div>figure>img {
+      width: 100%;
+  }
+
+  .card>div>p {
+      flex-grow: 2;
+      margin: 0;
+      line-height: 150%;
+  }
+
+  .card>ul {
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 3rem;
+  }
+
+header {
+    background: lightpink;
+    grid-column: 1 / 5;
+    background-color: #054b36;;
+}
+
+.card h2 {
+    margin: 0;
+    text-align: center;
+    border-bottom: #c1c1c1 4px solid;
+    height: fit-content;
+    margin: 0 10%;
+    padding: 0.5rem 0;
+}
+
+footer {
+    background: #054b36;
+    padding: 1rem 10rem 6rem 10rem;
+    text-align: center;
+    grid-column: 1 / 5;
+    color:#eee
+}
+
+
+
+.modern a {
+	flex: 1 1 100%;
+}
+
+
+.navigation {
+	list-style: none;
+	display: flex;
+	background-color: #000000;
+	align-items: center;
+	margin-top: 5rem;
+    font-size: 18pt;
+}
+.navigation li {
+	flex: 1 1 auto; /* difference between auto and 100% flex-basis - turn on link borders to view */
+}
+.navigation a {
+	display: block;
+	color: #eee;
+	padding: 1rem;
+	text-decoration: none;
+	text-align: center;
+/* 	border: 1px dotted cyan; */
+}
+.navigation a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: rgb(247, 247, 246);
+}
+
+.wrap {
+		flex-wrap: wrap;
+}
+
+.title {
+	padding-left: 1rem;
+}
