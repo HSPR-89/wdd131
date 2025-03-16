@@ -1,0 +1,88 @@
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: auto 1fr 10% / 1fr 1fr 1fr 1fr;
+}
+
+img {
+width: 100px;
+}
+
+main {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-template: 1fr/ 2fr 1fr;
+}
+
+.title{
+    margin: 0;
+    background: #1681d8;
+    text-align: center;
+    font-size: 16pt;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    
+}
+
+.card > div{
+    display: flex;
+}
+
+.card {
+    border: 0.5px solid rgb(14, 13, 13);
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+header {
+    background: lightpink;
+    grid-column: 1 / 5;
+    background-color: #1681d8;;
+}
+
+
+footer {
+    background: #1681d8;
+    padding: 1rem 10rem 6rem 10rem;
+    text-align: center;
+    grid-column: 1 / 5;
+}
+
+
+
+.modern a {
+	flex: 1 1 100%;
+}
+
+
+.navigation {
+	list-style: none;
+	display: flex;
+	background-color: #000000;
+	align-items: center;
+	margin-top: 5rem;
+}
+.navigation li {
+	flex: 1 1 auto; /* difference between auto and 100% flex-basis - turn on link borders to view */
+}
+.navigation a {
+	display: block;
+	color: #eee;
+	padding: 1rem;
+	text-decoration: none;
+	text-align: center;
+/* 	border: 1px dotted cyan; */
+}
+.navigation a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: yellow;
+}
+
+.wrap {
+		flex-wrap: wrap;
+}
+
+.title {
+	padding-left: 1rem;
+}
