@@ -1,0 +1,88 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns, each taking equal space */
+    grid-template-rows: repeat(3, 1fr);
+    /* 3 rows, each taking equal space */
+    gap: 10px;
+    /* Adjust the space between images */
+}
+
+.grid-container img {
+    width: 100%;
+    /* Make images fill the grid cell */
+    height: auto;
+    /* Maintain aspect ratio of images */
+}
+
+figure {
+    text-align: center;
+    /* Center the caption horizontally */
+}
+
+.temple-album {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    /* Set font size */
+    color: white;
+    /* White text color */
+    font-weight: bold;
+    /* Make the title bold */
+    font-size: 20pt;
+    
+}
+
+footer {
+    background: #054b36;
+    padding: 1rem 10rem 6rem 10rem;
+    text-align: center;
+    grid-column: 1 / 5;
+    color: #eee
+}
+
+h1 {
+    text-align: center;
+    /* Ensure text is centered */
+}
+
+.modern a {
+    flex: 1 1 100%;
+}
+
+
+.navigation {
+    list-style: none;
+    display: flex;
+    background-color: #000000;
+    align-items: center;
+    font-size: 16pt;
+    text-align: right;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+    /* difference between auto and 100% flex-basis - turn on link borders to view */
+}
+
+.navigation a {
+    color: #eee;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: right;
+    /* 	border: 1px dotted cyan; */
+}
+
+.navigation a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgb(247, 247, 246);
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.title {
+    padding-left: 1rem;
+}
