@@ -1,0 +1,78 @@
+/* Basic styling for the navbar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    color: lightblue;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        /* Show hamburger icon on small screens */
+    }
+
+    #nav-links {
+        display: none;
+        /* Hide the navigation links by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #333;
+        margin-top: 10px;
+    }
+
+    #nav-links.active {
+        display: flex;
+        /* Show the navigation links when the hamburger is clicked */
+    }
+
+    ul li {
+        margin: 10px 0;
+        /* Add spacing between links on small screens */
+    }
+}
