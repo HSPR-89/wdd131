@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Howard Pereira</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <meta name="author" content="Howard Pereira" />
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, Howard Pereira, W03 Assignment: country page" />
+    <script src="scripts/place.js" defer></script>
+    <!DOCTYPE html>
+    <html lang="en">
+</head>
+
+<body>
+    <header>
+        <h1>Puerto viejo</h1>
+    </header>
+    <div class="bar"></div>
+
+    <!-- Hero Section with responsive image -->
+    <div class="hero">
+        <picture>
+            <source srcset="images/images.webp" media="(max-width: 768px)">
+            <img src="images/puerto viejo.webp" alt="Puerto viejo">
+        </picture>
+
+        <!-- Desktop layout cards -->
+        <div class="info-section">
+            <div class="card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 9188 sq km</li>
+                    <li><strong>Population:</strong> 20 184</li>
+                    <li><strong>Capital:</strong> Limon</li>
+                    <li><strong>Languages:</strong> Español, Patua</li>
+                    <li><strong>Currency:</strong> Colon</li>
+                    <li><strong>Time Zone:</strong> UTC-6</li>
+                    <li><strong>Calling Code:</strong> +506</li>
+                    <li><strong>Internet TLD:</strong> .cr</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Weather <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Weather"
+                        style="width:20px;"></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> 10 ºC</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> 5 km/h</li>
+                    <li>
+                        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile stacked layout -->
+    <div class="mobile-layout">
+        <div class="mobile-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 9188 sq km</li>
+                <li><strong>Population:</strong> 20 184</li>
+                <li><strong>Capital:</strong> Limon</li>
+                <li><strong>Languages:</strong> Español, Patua</li>
+                <li><strong>Currency:</strong> Colon</li>
+                <li><strong>Time Zone:</strong> UTC-6</li>
+                <li><strong>Calling Code:</strong> +506</li>
+                <li><strong>Internet TLD:</strong> .cr</li>
+            </ul>
+        </div>
+
+        <div class="mobile-card">
+            <h2>Weather</h2>
+            <img src="images/9025960_sun_icon.svg" class="weather-icon" alt="Weather Icon">
+            <ul>
+                <li><strong>Temperature:</strong> 10 ºC</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> 5 km/h</li>
+                <li>
+                        <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<footer contenteditable>
+    <p> ©
+        <span id="currentyear"></span>
+        ⚽ Howard Pereira ⚽
+        Costa Rica
+    </p>
+    <p id="lastmodified">
+
+    </p>
+</footer>
+</body>
+
+</html>
