@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puerto Viejo - Costa Rica</title>
+
+    <link rel="stylesheet" href="styles/place1.css">
+
+    <meta name="author" content="Howard Pereira">
+    <meta name="description" content="Puerto Viejo information page">
+
+    <script src="scripts/place1.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Puerto Viejo</h1>
+    </header>
+
+    <div class="bar"></div>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/puerto-viejo-small.webp" media="(max-width: 768px)">
+                <img src="images/puerto-viejo-small.webp"Vista de Puerto Viejo, Costa Rica">
+            </picture>
+
+            <div class="info-section">
+
+                <div class="card">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><strong>Province:</strong> Limón</li>
+                        <li><strong>Region:</strong> Caribbean South</li>
+                        <li><strong>Population:</strong> 20,184</li>
+                        <li><strong>Languages:</strong> Español, Patua</li>
+                        <li><strong>Currency:</strong> Colón</li>
+                        <li><strong>Time Zone:</strong> UTC-6</li>
+                        <li><strong>Calling Code:</strong> +506</li>
+                        <li><strong>Internet TLD:</strong> .cr</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Weather</h2>
+                    <ul>
+                        <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+                        <li><strong>Conditions:</strong> Partly Cloudy</li>
+                        <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+                        <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © <span id="currentyear"></span> ⚽ Howard Pereira ⚽ Costa Rica
+        </p>
+        <p id="lastmodified"></p>
+    </footer>
+
+</body>
+
+</html>

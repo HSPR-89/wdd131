@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+/* Header & Footer */
+header,
+footer {
+    background: linear-gradient(90deg, #056836, #0d7c4c);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.bar {
+    height: 6px;
+    background-color: #0d7c4c;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+/* Info cards */
+.info-section {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 280px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.card h2 {
+    margin-top: 0;
+    background-color: #2a7742;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.card ul {
+    padding-left: 1rem;
+}
+
+/* Footer */
+footer p {
+    margin: 0.3rem;
+    font-size: 0.9rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+
+    .info-section {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
