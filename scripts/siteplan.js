@@ -3,18 +3,25 @@ const flightType = document.getElementById("flightType");
 const result = document.getElementById("result");
 
 if (flightType) {
+    const result = document.getElementById("result");
+    const image = document.getElementById("flightImage");
+
     flightType.addEventListener("change", function () {
         let value = flightType.value;
 
         if (value === "city") {
-            result.textContent = `City flying requires more caution!`;
+            result.textContent = `Flying in the city requires caution due to buildings and people.`;
+            image.src = "images/city.jpg";
         } else if (value === "nature") {
-            result.textContent = `Nature flying is great for photos!`;
+            result.textContent = `Flying in nature is great for landscapes and open space.`;
+            image.src = "images/nature.jpg";
         } else {
             result.textContent = "";
+            image.src = "";
         }
     });
 }
+
 
 // Array + function
 function showTips() {
