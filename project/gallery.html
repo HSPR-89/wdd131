@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery</title>
-    <link rel="stylesheet" href="../styles/siteplan.css">
-    
+
+    <!-- CSS (ajustado a tu estructura) -->
+    <link rel="stylesheet" href="siteplan.css">
 </head>
 
 <body>
@@ -20,22 +21,57 @@
     </header>
 
     <main>
+
         <h2>Photos</h2>
 
-        <div class="gallery">
-            <img src="images/photo1.jpg" loading="lazy">
-            <img src="images/photo2.jpg" loading="lazy">
-            <img src="images/photo3.jpg" loading="lazy">
-        </div>
+        <!-- MENSAJE DINÁMICO -->
+        <p id="favoriteMessage"></p>
 
-        <button onclick="saveFavorite()">Save Favorite Spot</button>
+        <!-- GALERÍA -->
+        <div class="gallery">
+
+            <div>
+                <img src="beach.JPG" class="drone-img"alt="Beach" loading="lazy">
+                <button onclick="saveFavorite('Beach')">Favorite</button>
+            </div>
+
+            <div>
+                <img src="alcatraz.JPG" class="drone-img" alt="Alcatraz" loading="lazy">
+                <button onclick="saveFavorite('Alcatraz')">Favorite</button>
+            </div>
+
+            <div>
+                <img src="cachi.jpg" class="drone-img" alt="Cachi" loading="lazy">
+                <button onclick="saveFavorite('Cachi')">Favorite</button>
+            </div>
+
+            <div>
+                <img src="punta.JPG" class="drone-img" alt="Punta Leona" loading="lazy">
+                <button onclick="saveFavorite('Punta Leona')">Favorite</button>
+            </div>
+
+            <div>
+                <img src="sanfranciscobay.JPG" class="drone-img" alt="San Francisco Bay" loading="lazy">
+                <button onclick="saveFavorite('San Francisco Bay')">Favorite</button>
+            </div>
+
+            <div>
+                <img src="sunset.JPG" class="drone-img" alt="Sunset" loading="lazy">
+                <button onclick="saveFavorite('Sunset')">Favorite</button>
+            </div>
+
+        </div>
 
     </main>
 
     <footer>
-        <p>© 2026 Drone Guide</p>
+        <p>© <span id="currentyear"></span> ⚽ Howard Pereira R ⚽ Costa Rica</p>
+        <p id="lastmodified"></p>
     </footer>
-<script src="../scripts/siteplan.js"></script>
-    
+
+    <!-- JS (ajustado a tu estructura) -->
+    <script src="siteplan.js"></script>
+
 </body>
 
+</html>

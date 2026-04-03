@@ -1,6 +1,6 @@
-// DOM interaction
+
 const flightType = document.getElementById("flightType");
-const result = document.getElementById("result");
+
 
 if (flightType) {
     const result = document.getElementById("result");
@@ -23,13 +23,19 @@ if (flightType) {
 }
 
 
-// Array + function
+
 function showTips() {
     const tips = [
         "Check battery before flying",
         "Avoid strong wind",
         "Follow local laws",
-        "Keep line of sight"
+        "Keep line of sight",
+        "Start in an open area with few obstacles",
+        "Practice takeoff, landing, and hovering first",
+        "Keep a safe distance from people and animals",
+        "Calibrate your drone before flying",
+        "Use beginner mode if available",
+        "Land immediately if something feels wrong"
     ];
 
     const list = document.getElementById("tipsList");
@@ -42,8 +48,56 @@ function showTips() {
     });
 }
 
-// localStorage
-function saveFavorite() {
-    localStorage.setItem("favoriteSpot", "My favorite drone location");
-    alert("Saved!");
+
+
+const today = new Date();
+const year = document.querySelector("#currentyear");
+year.innerHTML = today.getFullYear();
+
+const lastModified = document.querySelector("#lastmodified");
+lastModified.innerHTML = `Last Modification: ${document.lastModified}`
+
+
+function saveFavorite(spot) {
+    localStorage.setItem("favoriteSpot", spot);
+
+    document.getElementById("favoriteMessage").textContent =
+        "Your favorite photo is: " + spot;
+}
+
+// Mostrar al cargar
+const savedSpot = localStorage.getItem("favoriteSpot");
+
+if (savedSpot) {
+    const message = document.getElementById("favoriteMessage");
+    if (message) {
+        message.textContent = "Your favorite spot is: " + savedSpot;
+    }
+}
+
+
+
+
+
+
+
+function saveFavorite(spot) {
+    localStorage.setItem("favoriteSpot", spot);
+
+    document.getElementById("favoriteMessage").textContent =
+        "Saved favorite: " + spot;
+
+    // Quitar favorito anterior
+    document.querySelectorAll(".drone-img").forEach(img => {
+        img.classList.remove("favorite");
+    });
+
+    // Buscar la imagen correcta y resaltarla
+    const images = document.querySelectorAll(".drone-img");
+
+    images.forEach(img => {
+        if (img.alt === spot) {
+            img.classList.add("favorite");
+        }
+    });
 }
