@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <main>
+        <p>Your review has been submitted successfully.</p>
+        <p>Total Reviews Submitted: <span id="counter"></span></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Product Reviews</p>
+    </footer>
+
+    <script>
+        let count = localStorage.getItem("reviewCount") || 0;
+        count++;
+        localStorage.setItem("reviewCount", count);
+
+        document.getElementById("counter").textContent = count;
+    </script>
+
+</body>
+
+</html>

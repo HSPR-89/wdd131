@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+header,
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    background: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+legend {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+fieldset {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+input[type="submit"] {
+    margin-top: 1.5rem;
+    background: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem;
+}
+
+input[type="submit"]:hover {
+    background: #005fa3;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+    main {
+        padding: 0.5rem;
+    }
+}
