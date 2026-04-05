@@ -1,64 +1,126 @@
 body {
     font-family: Arial, sans-serif;
+    background: #eee;
     margin: 0;
-    background: #f4f4f4;
 }
 
-header,
-footer {
-    background: #333;
+
+header {
+    background: #4b004b;
     color: white;
     text-align: center;
     padding: 1rem;
 }
 
+/* Form container */
 main {
-    max-width: 600px;
-    margin: auto;
-    padding: 1rem;
-    background: white;
-}
-
-form {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
 }
 
-label,
-legend {
-    margin-top: 1rem;
-    font-weight: bold;
+.review-form {
+    background: #cfcbd1;
+    padding: 1.5rem;
+    width: 340px;
+    border-radius: 4px;
 }
 
+/* Labels */
+label {
+    display: block;
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Optional text */
+.optional {
+    color: blue;
+    font-size: 0.8rem;
+}
+
+/* Inputs */
 input,
 select,
 textarea {
+    width: 100%;
     padding: 0.5rem;
-    margin-top: 0.3rem;
+    margin-top: 0.4rem;
+    border: 1px solid #888;
+    background: #eee;
+}
+
+/* Textarea height */
+textarea {
+    height: 80px;
 }
 
 fieldset {
+    border: none;
     margin-top: 1rem;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
+    padding: 0;
+}
+
+legend {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
 input[type="submit"] {
     margin-top: 1.5rem;
-    background: #0077cc;
-    color: white;
-    border: none;
-    cursor: pointer;
+    background: #ddd;
+    border: 1px solid #888;
     padding: 0.7rem;
+    font-weight: bold;
 }
 
 input[type="submit"]:hover {
-    background: #005fa3;
+    background: #ccc;
 }
 
-/* Mobile-friendly */
-@media (max-width: 600px) {
-    main {
-        padding: 0.5rem;
-    }
+.rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.rating-row label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+   margin: 0;
+}
+
+.feature-row {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.feature-row input {
+    justify-self: center;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #4b004b;
+    color: white;
+    padding: 30px 0;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.features label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0.4rem 0;
 }

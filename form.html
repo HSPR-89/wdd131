@@ -11,71 +11,82 @@
 <body>
 
     <header>
-        <h1>Product Review Form</h1>
-    </header>
+  <h1>Product Review</h1>
+</header>
 
-    <main>
-        <form method="get" action="review.html">
+<main>
+  <form method="get" action="review.html" class="review-form">
 
-            <!-- Product Name -->
-            <label for="product">Product Name</label>
-            <select id="product" name="product" required>
-                <option value="" disabled selected>Select a Product ...</option>
-            </select>
+    <label for="product">Product Name</label>
+    <select id="product" name="product" required>
+      <option value="" disabled selected>Choose a Product ...</option>
+    </select>
 
-            <!-- Rating -->
-            <fieldset>
-                <legend>Overall Rating</legend>
+    <fieldset class="rating">
+        <legend>Overall Rating</legend>
+    
+        <div class="rating-row">
+            <label><input type="radio" name="rating" value="1" required> ☆</label>
+            <label><input type="radio" name="rating" value="2"> ☆☆</label>
+            <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+            <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+            <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+        </div>
+    </fieldset>
 
-                <label>
-                    <input type="radio" name="rating" value="1" required> ☆
-                </label>
-                <label>
-                    <input type="radio" name="rating" value="2"> ☆☆
-                </label>
-                <label>
-                    <input type="radio" name="rating" value="3"> ☆☆☆
-                </label>
-                <label>
-                    <input type="radio" name="rating" value="4"> ☆☆☆☆
-                </label>
-                <label>
-                    <input type="radio" name="rating" value="5"> ☆☆☆☆☆
-                </label>
-            </fieldset>
+    <label for="date">Date of Installation</label>
+    <input type="date" id="date" name="date" required>
 
-            <!-- Date -->
-            <label for="date">Date of Installation</label>
-            <input type="date" id="date" name="date" required>
+<fieldset class="features">
+    <legend>
+        Which features did you find useful in the product?
+        <span class="optional">(Check all that apply)</span>
+    </legend>
 
-            <!-- Features -->
-            <fieldset>
-                <legend>Useful Features</legend>
+    <div class="feature-row">
+        <input type="checkbox" value="Durability">
+        <span>Durability</span>
+    </div>
 
-                <label><input type="checkbox" name="features" value="Durable"> Durable</label>
-                <label><input type="checkbox" name="features" value="Easy to Use"> Easy to Use</label>
-                <label><input type="checkbox" name="features" value="Affordable"> Affordable</label>
-                <label><input type="checkbox" name="features" value="Compact"> Compact</label>
-            </fieldset>
+    <div class="feature-row">
+        <input type="checkbox" value="Ease of Use">
+        <span>Ease of Use</span>
+    </div>
 
-            <!-- Review -->
-            <label for="review">Written Review</label>
-            <textarea id="review" name="review"></textarea>
+    <div class="feature-row">
+        <input type="checkbox" value="Performance">
+        <span>Performance</span>
+    </div>
 
-            <!-- Username -->
-            <label for="username">Your Name</label>
-            <input type="text" id="username" name="username">
+    <div class="feature-row">
+        <input type="checkbox" value="Design">
+        <span>Design</span>
+    </div>
+</fieldset>
 
-            <!-- Submit -->
-            <input type="submit" value="Submit Review">
+    <label for="review">
+      Written Review <span class="optional">(Optional)</span>
+    </label>
+    <textarea id="review" name="review"></textarea>
 
-        </form>
-    </main>
+    <label for="username">
+      Your Name <span class="optional">(Optional)</span>
+    </label>
+    <input type="text" id="username" name="username">
 
-    <footer>
-        <p>&copy; 2026 | Product Reviews</p>
+    <input type="submit" value="Post Review">
+
+  </form>
+</main>
+
+    <footer contenteditable>
+        <p> ©
+            <span id="currentyear"></span>
+            ⚽ Howard Pereira R⚽
+            Costa Rica
+        </p>
+        <p id="lastmodified">
     </footer>
-
     <script src="scripts/form.js"></script>
 </body>
 

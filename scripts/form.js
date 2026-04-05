@@ -7,9 +7,18 @@ const products = [
 
 const select = document.getElementById("product");
 
-products.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    select.appendChild(option);
-});
+if (select) {
+    products.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product.id;
+        option.textContent = product.name;
+        select.appendChild(option);
+    });
+}
+
+const today = new Date();
+const year = document.querySelector("#currentyear");
+year.innerHTML = today.getFullYear();
+
+const lastModified = document.querySelector("#lastmodified");
+lastModified.innerHTML = `Last Modification: ${document.lastModified}`

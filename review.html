@@ -18,9 +18,6 @@
         <p>Total Reviews Submitted: <span id="counter"></span></p>
     </main>
 
-    <footer>
-        <p>&copy; 2026 | Product Reviews</p>
-    </footer>
 
     <script>
         let count = localStorage.getItem("reviewCount") || 0;
@@ -30,6 +27,15 @@
         document.getElementById("counter").textContent = count;
     </script>
 
+    <footer contenteditable>
+        <p> ©
+            <span id="currentyear"></span>
+            ⚽ Howard Pereira R⚽
+            Costa Rica
+        </p>
+        <p id="lastmodified"></p>
+    </footer>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>
