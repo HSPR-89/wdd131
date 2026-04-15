@@ -151,3 +151,37 @@ footer p {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 
 }
+
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+        margin: 10px auto;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #222;
+    }
+
+    nav a {
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
