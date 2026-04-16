@@ -127,14 +127,6 @@ function showTips() {
     `;
 }
 
-    const list = document.getElementById("tipsList");
-    list.innerHTML = "";
-
-    tips.forEach(tip => {
-        const li = document.createElement("li");
-        li.textContent = tip;
-        list.appendChild(li);
-    });
 
 
 
@@ -147,6 +139,12 @@ const lastModified = document.querySelector("#lastmodified");
 lastModified.innerHTML = `Last Modification: ${document.lastModified}`
 
 
+
+
+
+
+
+
 function saveFavorite(spot) {
     localStorage.setItem("favoriteSpot", spot);
 
@@ -154,7 +152,7 @@ function saveFavorite(spot) {
         "Your favorite photo is: " + spot;
 }
 
-// Mostrar al cargar
+
 const savedSpot = localStorage.getItem("favoriteSpot");
 
 if (savedSpot) {
@@ -176,12 +174,12 @@ function saveFavorite(spot) {
     document.getElementById("favoriteMessage").textContent =
         "Saved favorite: " + spot;
 
-    // Quitar favorito anterior
+
     document.querySelectorAll(".drone-img").forEach(img => {
         img.classList.remove("favorite");
     });
 
-    // Buscar la imagen correcta y resaltarla
+
     const images = document.querySelectorAll(".drone-img");
 
     images.forEach(img => {
